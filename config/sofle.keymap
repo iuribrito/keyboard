@@ -49,7 +49,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Brito {
             display-name = "default";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -72,7 +72,7 @@
                 <&scroll_mouse_behavior SCRL_UP SCRL_DOWN>;
         };
 
-        lower_layer {
+        Move {
             display-name = "lower";
 
             // TODO: Some binds are waiting for shifted keycode support.
@@ -92,11 +92,11 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp C_VOLUME_DOWN C_VOLUME_UP>,
                 <&scroll_mouse_behavior SCRL_RIGHT SCRL_LEFT>;
         };
 
-        raise_layer {
+        Extra {
             display-name = "raise";
 
             // ------------------------------------------------------------------------------------------------------------
@@ -107,7 +107,7 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&kp GRAVE           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &kp DELETE
+&kp TILDE           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4                    &trans  &trans  &trans  &trans  &trans  &kp DELETE
 &kp CAPSLOCK        &trans        &trans        &kp PRINTSCREEN  &kp HOME      &kp PG_UP                       &trans  &trans  &trans  &trans  &trans  &trans
 &trans              &trans        &trans        &kp INS          &kp END       &kp PG_DN                       &trans  &trans  &trans  &trans  &trans  &trans
 &kp K_CONTEXT_MENU  &kp K_UNDO    &kp K_CUT     &kp K_COPY       &kp K_PASTE   &trans        &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
