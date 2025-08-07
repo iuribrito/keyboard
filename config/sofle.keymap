@@ -96,4 +96,80 @@
                 <&scroll_mouse_behavior SCRL_RIGHT SCRL_LEFT>;
         };
     };
+
+    display {
+        compatible = "zmk,display";
+
+        left_display_screen: left_display_screen {
+            compatible = "zmk,display-screen-status";
+            label = "left_display_screen";
+            widgets = <&wpm_widget &battery_widget &layer_widget &caps_word_widget>;
+        };
+
+        right_display_screen: right_display_screen {
+            compatible = "zmk,display-screen-status";
+            label = "right_display_screen";
+            widgets = <&layer_image_widget>;
+        };
+
+        caps_word_widget: caps_word_widget {
+            compatible = "zmk,widget-caps-word-status";
+            label = "caps_word_widget";
+            position = <0 48>;
+        };
+
+        wpm_widget: wpm_widget {
+            compatible = "zmk,widget-wpm";
+            label = "wpm_widget";
+            position = <0 0>;
+        };
+
+        battery_widget: battery_widget {
+            compatible = "zmk,widget-battery-status";
+            label = "battery_widget";
+            position = <0 16>;
+        };
+
+        layer_widget: layer_widget {
+            compatible = "zmk,widget-layer-status";
+            label = "layer_widget";
+            position = <0 32>;
+        };
+
+        layer_image_widget: layer_image_widget {
+            compatible = "zmk,widget-layer-state-image";
+            label = "layer_image_widget";
+            base-image = <&cat_base_image>;
+            lower-image = <&cat_lower_image>;
+            raise-image = <&cat_raise_image>;
+            position = <0 0>;
+        };
+
+        cat_base_image: cat_base_image {
+            compatible = "zmk,widget-image";
+            label = "cat_base_image";
+            image = <
+                0x00, 0x3C, 0x7E, 0x66, 0x7E, 0x3C, 0x00, 0x00
+            >; // Happy Cat
+            position = <0 0>;
+        };
+
+        cat_lower_image: cat_lower_image {
+            compatible = "zmk,widget-image";
+            label = "cat_lower_image";
+            image = <
+                0x00, 0x24, 0x5A, 0x5A, 0x5A, 0x24, 0x00, 0x00
+            >; // Thinking Cat
+            position = <0 0>;
+        };
+
+        cat_raise_image: cat_raise_image {
+            compatible = "zmk,widget-image";
+            label = "cat_raise_image";
+            image = <
+                0x00, 0x18, 0x24, 0x42, 0x24, 0x18, 0x00, 0x00
+            >; // Surprised Cat
+            position = <0 0>;
+        };
+    };
 };
