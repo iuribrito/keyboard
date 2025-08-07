@@ -148,27 +148,21 @@
         cat_base_image: cat_base_image {
             compatible = "zmk,widget-image";
             label = "cat_base_image";
-            image = <
-                0x00, 0x3C, 0x7E, 0x66, 0x7E, 0x3C, 0x00, 0x00
-            >; // Happy Cat
+            image = <0x00 0x3C 0x7E 0x66 0x7E 0x3C 0x00 0x00>; // Happy Cat
             position = <0 0>;
         };
 
         cat_lower_image: cat_lower_image {
             compatible = "zmk,widget-image";
             label = "cat_lower_image";
-            image = <
-                0x00, 0x24, 0x5A, 0x5A, 0x5A, 0x24, 0x00, 0x00
-            >; // Thinking Cat
+            image = <0x00 0x24 0x5A 0x5A 0x5A 0x24 0x00 0x00>; // Thinking Cat
             position = <0 0>;
         };
 
         cat_raise_image: cat_raise_image {
             compatible = "zmk,widget-image";
             label = "cat_raise_image";
-            image = <
-                0x00, 0x18, 0x24, 0x42, 0x24, 0x18, 0x00, 0x00
-            >; // Surprised Cat
+            image = <0x00 0x18 0x24 0x42 0x24 0x18 0x00 0x00>; // Surprised Cat
             position = <0 0>;
         };
     };
